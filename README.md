@@ -1,3 +1,3 @@
 # pcuCapstoneWeb
 
-# 웹.
+# 웹웹.
