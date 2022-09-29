@@ -53,6 +53,18 @@
   -데이터 리스트 에서 우측 수정 아이콘을 클릭 하면 수정 화면으로 이동하여 수정 하는 방 이름이 기존에 존재한는 방 이름과 중복이 되지 않는다면 alert로 성공 메세지를 알려주고
   기존의 방이름과 중복이 된다면 alert로 경고 메세지를 보여주고 데이터 리스트 화면으로 이동 한다.
   
+10. 페이징 기능 : 데테일한 정보를 보기 위해 해당 방에 대한 모든 온도, 습도, 미세먼지에 대한 정보들을 한페이지에 6개씩 보여주는 기능
+  ![paging](https://user-images.githubusercontent.com/93322852/193008842-5e9ba6a9-e4e0-455c-88d2-fe74441bdf75.png)
+  어려웠던 점 : 스프링 에서 제공하는 pageable API를 사용하면 페이징 기능을 간단하게 구현할 수 있지만 그러기 위해서는 JPA형식으로 코드를 짰어야 했는데 그렇지 않아서 해당 api를 사   용하기 위해서는 구조의 큰 틀을 변경해야 하기 때문에 다른 방법을 찾은데 구글링 하는 시간이 많이 걸렸다. 
+  다행히 dto로 기능을 만들어 페이지 기능을 직접 만들어 주어 DB에 있는 데이터 총 갯수외 시작 페이지만 설정해주어 각각 버튼을 눌렀을때 화면에 뿌려지는 데이터에 limit 시작숫자, 한번   에 보여지는 숫자로 DB에서 데이터를 불러와 a태그를 통해 해당 페이지로 이동하는 형태로 기능을 마무리 했다.
+  
+11. 검색 기능 : 온도, 미세먼지, 습도에 대해 원하는 값을 검색하면 해당 값들만 보여 준다
+  ![search](https://user-images.githubusercontent.com/93322852/193009496-62d1470a-c795-403a-a2b9-711b5401ba6e.png)
+  어려웠던 점 : 검색 기능의 경우 어떤 방법으로 리스트에서 검색된 내용만 보여지게 할지 구글링을 하다 방법이 너무 많아 이것저것 시도하면서 시간이 많이 들어갔던것 같고 sql문에서       LIKE%%로 해당 검색 문자를 보내와 받아온 값으로 화면에 뿌려주려고 했는데 계속 알 수 없는 오류가 떠서 구글링 결과 jdbcType=VARCHAR를 넣어 주어야 한다는 것을 알게 되었다. null 값   이 들어올 수도 있기 때문에 미리 기본값을 넣어주어야 오류를 피할 수 있다.
+
+  
+
+  
   
   ==문제 상황==
   현재 DB에서 room테이블의 infoId와 + info테이블의 roomId를 통해 조인을 시키는데 방을 만들때 infoId에 null값이 들어가게 되어 추후 방에 대한 정보와 매칭이 될 수 없다.
@@ -65,4 +77,25 @@
   https://noonnu.cc/(폰트 디자인을 참고할때 사용)
   https://getbootstrap.com/docs/5.2/getting-started/introduction/(CSS디자인 틀을 참고할때 사용)
   https://icons.getbootstrap.com/(아이콘 디자인을 참고할때 사용)
+  
+  
+  ==웹 에서 서버로 부터 필요한 기능들 정리==
+![10](https://user-images.githubusercontent.com/93322852/193010267-b80268f0-1e7b-45a6-a061-ea0dfd98ac2b.png)
+
+![10](https://user-images.githubusercontent.com/93322852/193010278-45ecf3f1-bef9-46c7-a876-e299d1299533.png)
+
+![10](https://user-images.githubusercontent.com/93322852/193010298-ce5f9807-28d4-409b-bd65-1598590742c6.png)
+
+![10](https://user-images.githubusercontent.com/93322852/193010366-9de853e9-4cef-4a03-aaca-56836aa55ee0.png)
+
+![10](https://user-images.githubusercontent.com/93322852/193010368-985bb5f4-8303-4dc4-89e8-edaaf85d85cc.png)
+
+![10](https://user-images.githubusercontent.com/93322852/193010378-7c97a12b-3287-47a1-916d-59d232cb19cb.png)
+
+![10](https://user-images.githubusercontent.com/93322852/193010390-ad47b769-94e1-47e7-a9f2-31c10230b896.png)
+
+![10](https://user-images.githubusercontent.com/93322852/193010407-d47b11db-ab27-4b9b-be3f-6809a04fa239.png)
+
+
+
   
