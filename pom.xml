@@ -148,6 +148,21 @@
 		</dependency>
 		<!-- 소켓 연결을 위해 필요한 의존성 -->
 
+		<!-- restropit을 사용하기 위한 의존성 주입 -->
+		<dependency>
+			<groupId>com.squareup.retrofit2</groupId>
+			<artifactId>retrofit</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.squareup.retrofit2</groupId>
+			<artifactId>converter-gson</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+
+
+
+
 
 
 	</dependencies>

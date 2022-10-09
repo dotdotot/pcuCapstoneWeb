@@ -1,4 +1,5 @@
-# pcuCapstoneWeb
+# schoolCapstone1
+3학년2학기 캡스톤
 
 # 웹웹.
 
@@ -96,6 +97,3 @@
 
 ![10](https://user-images.githubusercontent.com/93322852/193010407-d47b11db-ab27-4b9b-be3f-6809a04fa239.png)
 
-
-
-  
