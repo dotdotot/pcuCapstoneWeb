@@ -90,6 +90,15 @@ jstl문법과 javascript문법을 같이 사용하고 있는데 jstl문법이 �
 기능을 계속 수정 하고 오류를 해결 하는 과정 에서 오래 걸렸고
 특히 Uncaught SyntaxError: missing ) after argument list라는 오류를 해결하는데 많은 시간이 걸렸습니다.
 오류 내용 참고 자료 ==> https://chobopark.tistory.com/199 
+
+13. 메인 페이지 구성 : 웹 페이지에 대한 기능 설명
+![1](https://user-images.githubusercontent.com/93322852/194898869-0e16d539-d3b8-40e6-9292-887c06b53992.png)
+![2](https://user-images.githubusercontent.com/93322852/194898884-de24a963-82bc-4f3d-b4b5-f11adf875364.png)
+![3](https://user-images.githubusercontent.com/93322852/194898895-574d685a-da2d-4a04-9a00-6d23ff5c2fad.png)
+각각의 버튼들에 대한 기능 설명 동작 과정에 대해 간단한 기술 설명
+문제점 : JSP파일에서 부트스트랩에 대한 css를 읽어 오지 못해 기능이 정상적으로 동작하지 않는 문제가 있어 -> https://codevang.tistory.com/223해당 블로그를 받아 도움을 받았 습니다. 다른 헤더 파일 에서 불러 오는데에 문제가 있어 추가적인 cdnjs를 통해 부트스트랙을 다시 한번 링크를 연결해 주어 문제를 해결했 습니다.
+
+
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------
   ==문제 상황==
   현재 DB에서 room테이블의 infoId와 + info테이블의 roomId를 통해 조인을 시키는데 방을 만들때 infoId에 null값이 들어가게 되어 추후 방에 대한 정보와 매칭이 될 수 없다.
