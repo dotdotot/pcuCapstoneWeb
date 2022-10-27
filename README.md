@@ -131,26 +131,26 @@ jstl문법과 javascript문법을 같이 사용하고 있는데 jstl문법이 �
 
 <hr/>
 
-14. 서버 연결 하기
-(http로 전송 하는 경우 외부 서버와 연결이 정상적으로 되었다.)
-![1](https://user-images.githubusercontent.com/93322852/198220558-8c4c7f9b-7423-4853-a59e-55af5fd5e0d5.png)
-![2](https://user-images.githubusercontent.com/93322852/198220583-b6bcae33-c722-44b1-8463-70e8a33cf99f.png)
-(https로 보낼경우 문제점 발생)
-오류 발생 원인 
--SSL 인증서가 신뢰하는 기관 인증서가 없거나 SSL/TLS암호화 버전이 맞지 않는 경우 발생
--연결하려는 서버의 인증서가 신뢰하는 인증기관 인증서 목록(keystore)에 없을 경우 - 사설 인증서일 경우.
--서버/클라이언트 사이에 사용하려는 TLS 버전이 맞지 않을 때(TLS 1.0 만 지원하는 서버에 1.2로 hand shaking 요청등)
--TLS 통신에 사용하려는 cipher suite 가 오래되거나 지원하지 않음. (JDK 1.8 부터는 sha1 지원 안되고 sha256 이상을 사용해야 한다고 한다.)
-==> 해결 방안 
+14. 서버 연결 하기 <br />
+(http로 전송 하는 경우 외부 서버와 연결이 정상적으로 되었다.)<br />
+![1](https://user-images.githubusercontent.com/93322852/198220558-8c4c7f9b-7423-4853-a59e-55af5fd5e0d5.png)<br />
+![2](https://user-images.githubusercontent.com/93322852/198220583-b6bcae33-c722-44b1-8463-70e8a33cf99f.png)<br />
+(https로 보낼경우 문제점 발생)<br />
+오류 발생 원인 <br />
+-SSL 인증서가 신뢰하는 기관 인증서가 없거나 SSL/TLS암호화 버전이 맞지 않는 경우 발생<br />
+-연결하려는 서버의 인증서가 신뢰하는 인증기관 인증서 목록(keystore)에 없을 경우 - 사설 인증서일 경우.<br />
+-서버/클라이언트 사이에 사용하려는 TLS 버전이 맞지 않을 때(TLS 1.0 만 지원하는 서버에 1.2로 hand shaking 요청등)<br />
+-TLS 통신에 사용하려는 cipher suite 가 오래되거나 지원하지 않음. (JDK 1.8 부터는 sha1 지원 안되고 sha256 이상을 사용해야 한다고 한다.)<br />
+==> 해결 방안 <br />
 ![5](https://user-images.githubusercontent.com/93322852/198222101-d177f5d1-1ff9-4e2f-ae0c-e50053290038.png)
 ![6](https://user-images.githubusercontent.com/93322852/198222118-fac8a8d5-fc37-4fdd-81e5-c7320b2cce7c.png)
 ![7](https://user-images.githubusercontent.com/93322852/198222132-75ea55fa-9956-4134-9792-ae9e47a10feb.png)
 
-서버 현재 문제점(22.10.27기준)
-현재 서버 두개중 어떠한 서버로 사용할지 결정X
-다영님 서버의 경우 회원가입시 데이터를 보내주고 성공하면 true값을 return받아야 하는데 null값으로 리턴 되는게  
+서버 현재 문제점(22.10.27기준)<br />
+현재 서버 두개중 어떠한 서버로 사용할지 결정X<br />
+다영님 서버의 경우 회원가입시 데이터를 보내주고 성공하면 true값을 return받아야 하는데 null값으로 리턴 되는게  <br />
 
-참고 자료
+참고 자료<br />
 https://goddaehee.tistory.com/m/268
 https://osujin.github.io/2017/06/09/HttpsURLConnection%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%ED%86%B5%EC%8B%A0%EC%8B%9C-SSL-%EC%9D%B8%EC%A6%9D%EC%84%9C-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EC%A7%80%EC%A0%95%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/
 https://offbyone.tistory.com/m/262
